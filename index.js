@@ -1,4 +1,4 @@
-// cd /D J:\Dokument\Bot 
+// cd /D J:\Dokument\Bot
 
 //Set variables for discord and import modules
 const fs = require(`fs`);
@@ -39,6 +39,10 @@ client.on('message', message => {
 
 	if (!client.commands.has(commandName)) return;
 	const command = client.commands.get(commandName);
+
+	if (command.args && !command.lengty) {
+		return message.channel.send("You have to give an argument, ${message.author}");
+	}
 
 	try {
 	    command.execute(message, args);
