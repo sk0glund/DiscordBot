@@ -1,0 +1,13 @@
+//Template for the command files:
+
+module.exports = {
+	name: '',
+	description: '',
+    args: false;
+    guildOnly: true,
+    cooldown: 0,
+
+	execute(message, args) {
+
+	},
+};
