@@ -1,4 +1,4 @@
-// cd /D J:\Dokument\Bot
+// cd /D J:\Dokument\Bot 
 
 //Set variables for discord and import modules
 const fs = require(`fs`);
