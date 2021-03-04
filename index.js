@@ -61,7 +61,7 @@ client.on('message', message => {
 	//Define now, timestamp and the cooldownAmount which defaults to 3 seconds if not specified.
 	const now = Date.now();
 	const timestamp = cooldowns.get(command.name);
-	const cooldownAmount = (command.cooldown || 3) * 1000
+	const cooldownAmount = (command.cooldown || 0.5) * 1000
 
 	//Check if the timestamp collection has the user id, otherwise sett that and define an expirationtime.
 	if(timestamp.has(message.author.id)) {
